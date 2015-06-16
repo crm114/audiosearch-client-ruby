@@ -141,7 +141,7 @@ module Audiosearch
       return Audiosearch::Response.new resp
     end
     
-    def person(id)
+    def get_person(id)
       resp = get("/people/#{id}")
       return resp.http_resp.body
     end
