@@ -140,6 +140,11 @@ module Audiosearch
       @debug and pp(resp)
       return Audiosearch::Response.new resp
     end
+    
+    def person(id)
+      resp = get("/people/#{id}")
+      return resp.http_resp.body
+    end
 
     def get_show(id)
       resp = get('/shows/'+id.to_s)
